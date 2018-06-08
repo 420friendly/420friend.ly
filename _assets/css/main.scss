@@ -1,9 +1,6 @@
----
-# Jekyll needs front matter for SCSS files
----
-
 $link-color: #90a959;
 $sidebar-bg-color: #90a959;
 $sidebar-width: 23rem;
 
-@import "hydeout";
+@import 'hydeout';
+@import 'sidebar';

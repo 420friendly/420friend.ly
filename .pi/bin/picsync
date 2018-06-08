@@ -1,0 +1,25 @@
+#!/bin/bash
+
+VERSION=$1
+DATE=$(date +"%Y%m%d%H%M")
+MINUTE=$(date +"%M")
+FILENAME="$DATE-$VERSION.jpg"
+IMAGE_PATH="/home/sam/420friendly/live/$FILENAME"
+
+# Say cheese!
+raspistill -o $IMAGE_PATH -w 640 -h 480
+if [ $? -ne 0 ]; then
+	'Capture failed. Abandoning ship!'
+	exit 1
+fi
+
+# Ship to S3
+aws s3 cp $IMAGE_PATH s3://420friendly/live/ --cache-control max-age=31536000
+
+# Copy once every hour to "last"
+if [ "$MINUTE" = "59" ] && [ "$VERSION" = "1" ]; then
+	aws s3 cp s3://420friendly/live/$FILENAME s3://420friendly/live/last.jpg --metadata-directive REPLACE --cache-control max-age=60
+fi
+
+# Cleanup
+rm $IMAGE_PATH
