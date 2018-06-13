@@ -2,8 +2,8 @@ class LiveStream
   delay = 60
   image_interval = 15
   image_url_base = 'http://images.420friend.ly/live/'
-  live_after = 21
-  live_before = 9
+  live_after = 3
+  live_before = 15
   max_retries = 2
 
   constructor: -> @load()
@@ -17,10 +17,10 @@ class LiveStream
   go_to_sleep: -> $('.live-stream').removeClass('live').addClass('sleeping')
 
   image_url: ->
-    year = @date.getFullYear()
-    month = @date.getMonth() + 1
-    day = @date.getDate()
-    hour = @date.getHours()
+    year = @date.getUTCFullYear()
+    month = @date.getUTCMonth() + 1
+    day = @date.getUTCDate()
+    hour = @date.getUTCHours()
     minute = @date.getMinutes()
     version = Math.floor(@date.getSeconds() / image_interval) + 1
 
@@ -35,7 +35,7 @@ class LiveStream
     @date = new Date();
     @date.setSeconds(@date.getSeconds() - delay)
 
-    if @date.getHours() < live_before || @date.getHours() >= live_after
+    if @date.getUTCHours() >= live_after && @date.getUTCHours() < live_before
       @load_live()
     else
       @go_to_sleep()
