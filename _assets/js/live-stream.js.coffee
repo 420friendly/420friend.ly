@@ -6,15 +6,26 @@ class LiveStream
   live_before = 15
   max_retries = 2
 
-  constructor: -> @load()
+  constructor: ->
+    @$live_stream = $('.live-stream')
+    @load()
 
-  go_offline: -> $('.live-stream').removeClass('live')
+  go_offline: -> @$live_stream.removeClass('live')
 
   go_live: (url) ->
-    $('.live-stream').css('background-image', 'url(' + url + ')')
-      .addClass('live')
+    @$live_stream.css('background-image', 'url(' + url + ')')
+      .removeClass('sleeping').addClass('live')
 
-  go_to_sleep: -> $('.live-stream').removeClass('live').addClass('sleeping')
+  go_to_sleep: ->
+    return if @sleeping()
+
+    $.get image_url_base + 'last.jpg', (ev, status, xhr) =>
+      date = new Date xhr.getResponseHeader('Last-Modified')
+      date_str = (date.getMonth() + 1) + '/' + date.getDate() + '/' +
+        date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes()
+      @$live_stream.attr('updated-at', date_str)
+
+    @$live_stream.removeClass('live').addClass('sleeping')
 
   image_url: ->
     year = @date.getUTCFullYear()
@@ -53,5 +64,7 @@ class LiveStream
       @go_live(url)
     .on 'error', =>
       if retry < max_retries then @load_live(retry + 1) else @go_offline()
+
+  sleeping: -> @$live_stream.hasClass('sleeping')
 
 $(document).ready -> new LiveStream
