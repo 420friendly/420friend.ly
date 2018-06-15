@@ -1,7 +1,7 @@
 class LiveStream
   delay = 60
   image_interval = 15
-  image_url_base = 'http://images.420friend.ly/live/'
+  image_url_base = 'https://images.420friend.ly/live/'
   live_after = 3
   live_before = 15
   max_retries = 2

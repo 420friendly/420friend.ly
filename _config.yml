@@ -16,7 +16,7 @@
 title: 420friend.ly
 email: 420friend.dot.ly@gmail.com
 description: Watcha growin?
-url: "http://420friend.ly" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://420friend.ly" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
