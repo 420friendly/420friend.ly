@@ -19,12 +19,7 @@ class LiveStream
   go_to_sleep: ->
     return if @sleeping()
 
-    $.get image_url_base + 'last.jpg', (ev, status, xhr) =>
-      date = new Date xhr.getResponseHeader('Last-Modified')
-      date_str = (date.getMonth() + 1) + '/' + date.getDate() + '/' +
-        date.getFullYear() + ' ' + date.getHours() + ':' + date.getMinutes()
-      @$live_stream.attr('updated-at', date_str)
-
+    @set_updated_at()
     @$live_stream.removeClass('live').addClass('sleeping')
 
   image_url: ->
@@ -66,5 +61,19 @@ class LiveStream
       if retry < max_retries then @load_live(retry + 1) else @go_offline()
 
   sleeping: -> @$live_stream.hasClass('sleeping')
+
+  set_updated_at: ->
+    $.get image_url_base + 'last.jpg', (ev, status, xhr) =>
+      date = new Date xhr.getResponseHeader('Last-Modified')
+      hour = date.getHours()
+      meridium = if hour >=12 then 'PM' else 'AM'
+      if hour == 0
+        hour = 12
+      else if hour > 12
+        hour = hour % 12
+
+      date_str = (date.getMonth() + 1) + '/' + date.getDate() + ' ' +
+        hour + ':' + date.getMinutes() + meridium
+      @$live_stream.attr('updated-at', date_str)
 
 $(document).ready -> new LiveStream
