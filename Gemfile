@@ -19,9 +19,10 @@ gem 'jekyll-theme-hydeout', '~> 3.6'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem 'jekyll-admin', '~> 0.8.0'
-  gem 'jekyll-assets', '~> 2.4'
+  gem 'jekyll-assets', '~> 3.0', '>= 3.0.11'
   gem 'jekyll-coffeescript', '~> 1.1', '>= 1.1.1'
   gem 'jekyll-feed', '~> 0.6'
+  gem 'uglifier', '~> 4.1', '>= 4.1.11'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
