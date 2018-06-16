@@ -4,3 +4,8 @@ $sidebar-width: 23rem;
 
 @import 'hydeout';
 @import 'sidebar';
+
+body.verify_age .content {
+	margin: 0 auto;
+	text-align: center;
+}
