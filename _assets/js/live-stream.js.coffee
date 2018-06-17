@@ -66,14 +66,20 @@ class LiveStream
     $.get image_url_base + 'last.jpg', (ev, status, xhr) =>
       date = new Date xhr.getResponseHeader('Last-Modified')
       hour = date.getHours()
+      minute = date.getMinutes()
+
       meridium = if hour >=12 then 'PM' else 'AM'
+
       if hour == 0
         hour = 12
       else if hour > 12
         hour = hour % 12
 
+      if minute < 10 then minute = "0" + minute
+
       date_str = (date.getMonth() + 1) + '/' + date.getDate() + ' ' +
-        hour + ':' + date.getMinutes() + meridium
+        hour + ':' + minute + meridium
+
       @$live_stream.attr('updated-at', date_str)
 
 $(document).ready -> new LiveStream
