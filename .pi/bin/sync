@@ -1,0 +1,17 @@
+#!/bin/bash
+
+IMAGE_DIR="/home/sam/420friendly/live/"
+THUMB_DIR="/home/sam/420friendly/live/thumb/"
+S3_BUCKET="420friendly"
+S3_DIR="/live/"
+
+# Copy image dir (with nested thumb dir) to S3
+aws s3 cp $IMAGE_DIR s3://$S3_BUCKET$S3_DIR --cache-control max-age=31536000 --recursive
+if [ $? -ne 0 ]; then
+	'Copy failed. Abandoning ship!'
+	exit 1
+fi
+
+# Remove copied images
+rm $IMAGE_DIR/*
+rm $THUMB_DIR/*

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+VERSION="1"
+DATE=$(date -d '1 minute ago' +"%Y%m%d%H%M")
+FILENAME="$DATE-$VERSION.jpg"
+S3_PATH="s3://420friendly/live/"
+S3_THUMB_PATH="s3://420friendly/live/thumb/"
+
+# Copy the capture from 1 minute ago to last for primary & thumbnail
+aws s3 cp $S3_PATH$FILENAME ${S3_PATH}last.jpg --metadata-directive REPLACE --cache-control max-age=3600
+aws s3 cp $S3_THUMB_PATH$FILENAME ${S3_THUMB_PATH}last.jpg --metadata-directive REPLACE --cache-control max-age=3600

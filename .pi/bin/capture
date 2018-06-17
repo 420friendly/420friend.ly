@@ -1,0 +1,18 @@
+#!/bin/bash
+
+VERSION=$1
+DATE=$(date +"%Y%m%d%H%M")
+MINUTE=$(date +"%M")
+IMAGE_DIR="/home/sam/420friendly/live/"
+THUMB_DIR="/home/sam/420friendly/live/thumb/"
+FILENAME="$DATE-$VERSION.jpg"
+
+# Say cheese!
+raspistill -o $IMAGE_DIR/$FILENAME -w 800 -h 600 -q 75
+if [ $? -ne 0 ]; then
+	'Capture failed. Abandoning ship!'
+	exit 1
+fi
+
+# Create thumbnail with max width of 380
+convert $IMAGE_DIR/$FILENAME -resize "380>" $THUMB_DIR/$FILENAME
