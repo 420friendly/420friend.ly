@@ -18,7 +18,7 @@ aws s3 cp $IMAGE_PATH s3://420friendly/live/ --cache-control max-age=31536000
 
 # Copy once every hour to "last"
 if [ "$MINUTE" = "59" ] && [ "$VERSION" = "1" ]; then
-	aws s3 cp s3://420friendly/live/$FILENAME s3://420friendly/live/last.jpg --metadata-directive REPLACE --cache-control max-age=60
+	aws s3 cp s3://420friendly/live/$FILENAME s3://420friendly/live/last.jpg --metadata-directive REPLACE --cache-control max-age=3600
 fi
 
 # Cleanup
