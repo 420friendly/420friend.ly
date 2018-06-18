@@ -27,7 +27,7 @@ plugins:
   - jekyll-coffeescript
   - jekyll-feed
 paginate: 5
-permalink: /:title
+permalink: /:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

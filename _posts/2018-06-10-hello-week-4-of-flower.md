@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Hello week 4 of flower!
-permalink: /hello-week-4-of-flower/
 ---
 
 It's an exciting week! With each passing week, the smells grow more intense and invigorating, and the promise of what's to come grows all the more real. And, perhaps more importantly in this case, week 4 of flower marks the end of the plant's expected vertical growth - a relief, as the ladies have nearly stretched all the way into the grow light.
