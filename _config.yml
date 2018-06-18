@@ -55,6 +55,10 @@ assets:
     browsers:
       - "last 2 versions"
       - "IE > 9"
+  cdn:
+    baseurl: false
+    destination: false
+    url: https://assets.420friend.ly
 
 disqus:
   shortname: 420friendly-1
