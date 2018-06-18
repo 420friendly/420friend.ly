@@ -1,6 +1,5 @@
 ---
 title: 'Now pouring: compost tea'
-layout: post
 ---
 
 Just finished dishing out some homeade compost tea brewed special for my cannabis plants. I started with dechlorinated water, to which I added as many sources of plant microbes as I had available to me, including:

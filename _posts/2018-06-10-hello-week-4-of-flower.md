@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Hello week 4 of flower!
 ---
 
