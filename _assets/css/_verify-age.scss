@@ -1,0 +1,28 @@
+html.age-verified #verify-age {
+	display: none;
+}
+
+#verify-age {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	z-index: 99;
+
+	.content {
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.primary-title {
+		margin: .67rem 0;
+		font-size: 2rem;
+	}
+
+	.secondary-title {
+		margin-top: 1.5rem;
+    	font-size: 1.25rem;
+	}
+}

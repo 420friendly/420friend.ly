@@ -1,28 +1,3 @@
-{% if page.layout == 'verify_age' %}
-<script type="text/javascript">
-    function setCookie(key, value) {
-        var expires = new Date();
-        expires.setTime(expires.getTime() + (365 * 24 * 60 * 60 * 1000));
-        document.cookie = key + '=' + value +
-        	';expires=' + expires.toUTCString() + ';path=/';
-    }
-
-	function verifyAge() {
-		setCookie('ageVerified', 'yes');
-
-		var redirect_url = '/';
-		var params = window.location.search.substr(1).split('&');
-		$.each(params, function() {
-			var param_val = this.split('=');
-			if (param_val && param_val[0] == 'redirect_to' && param_val[1]) {
-				redirect_url = decodeURIComponent(param_val[1]);
-			}
-		});
-
-		window.location.replace(redirect_url);
-	}
-</script>
-{% else %}
 <script type="text/javascript">
 	function getCookie(name) {
 		var value = '; ' + document.cookie;
@@ -30,11 +5,8 @@
 		if (parts.length == 2) return parts.pop().split(';').shift();
 	}
 
-	if (!getCookie('ageVerified')) {
-		var verifyURL = '/verify-age/?redirect_to=' +
-			encodeURIComponent(window.location.pathname);
-
-		window.location.replace(verifyURL);
+	if (getCookie('ageVerified')) {
+		document.getElementsByTagName('html')[0]
+			.setAttribute('class', 'age-verified');
 	}
 </script>
-{% endif %}
