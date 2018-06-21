@@ -1,0 +1,5 @@
+* 3-14 * * * /home/sam/bin/capture 1 ; /home/sam/bin/sync
+* 3-14 * * * sleep 15 ; /home/sam/bin/capture 2
+* 3-14 * * * sleep 30 ; /home/sam/bin/capture 3 ; /home/sam/bin/sync
+* 3-14 * * * sleep 45 ; /home/sam/bin/capture 4
+0 4-15 * * * /home/sam/bin/copy-last
