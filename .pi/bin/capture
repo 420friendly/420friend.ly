@@ -10,7 +10,8 @@ FILENAME="$DATE-$VERSION.jpg"
 # Say cheese!
 raspistill -o $IMAGE_DIR/$FILENAME -w 800 -h 600 -q 75
 if [ $? -ne 0 ]; then
-	'Capture failed. Abandoning ship!'
+	rm $IMAGE_DIR/$FILENAME
+	echo 'Capture failed. Abandoning ship!'
 	exit 1
 fi
 
