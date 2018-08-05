@@ -3,8 +3,8 @@ title: 'On deck: Pineapple Chunk and Glueberry OG'
 ---
 
 Just popped a couple new feminized seeds -
-[Pineapple Chunk](https://www.barneysfarm.com/pineapple-chunk-15){:target='_blank'}, and
-[Glueberry OG](https://www.dutch-passion.com/en/cannabis-seeds/product/glueberry-og-feminized-cannabis-seeds/){:target='_blank'}.
+[Pineapple Chunk](https://www.barneysfarm.com/pineapple-chunk-15){:rel='noopener', :target='_blank'}, and
+[Glueberry OG](https://www.dutch-passion.com/en/cannabis-seeds/product/glueberry-og-feminized-cannabis-seeds/){:rel='noopener', :target='_blank'}.
 First, I soaked my Grodan cubes in pH-adjusted water (to ~5.5) for an hour or so.
 
 {% asset grow-journal/2018/06/grodan-cubes-soaking-in-water.jpg alt="Grodan cubes soaking in water" %}
