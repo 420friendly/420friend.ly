@@ -63,7 +63,7 @@ class LiveStream
   sleeping: -> @$live_stream.hasClass('sleeping')
 
   set_updated_at: ->
-    $.get image_url_base + 'last.jpg', (ev, status, xhr) =>
+    $.get image_url_base + 'last.jpg?js', (ev, status, xhr) =>
       date = new Date xhr.getResponseHeader('Last-Modified')
       hour = date.getHours()
       minute = date.getMinutes()
