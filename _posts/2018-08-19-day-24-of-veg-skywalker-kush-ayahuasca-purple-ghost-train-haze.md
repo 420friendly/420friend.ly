@@ -7,19 +7,19 @@ now in week 4 of veg, and after topping have 4 primary shoots each at the top
 of the canopy.
 
 I recently switched to
-[Advanced Nutrients](https://www.advancednutrients.com/){:rel='noopener', :target='_blank'}
+[Advanced Nutrients](https://www.advancednutrients.com/){:rel='noopener'}{:target='_blank'}
 instead of
-[Fox Farm](https://foxfarmfertilizer.com/){:rel='noopener', :target='_blank'}
+[Fox Farm](https://foxfarmfertilizer.com/){:rel='noopener'}{:target='_blank'}
 due to problems I've had with calcium deficiency while growing in coco coir
 using the Fox Farm hydro lineup.
 
-[Skywalker Kush](https://dnagenetics.com/skywalker-kush.html){:rel='noopener', :target='_blank'}:
+[Skywalker Kush](https://dnagenetics.com/skywalker-kush.html){:rel='noopener'}{:target='_blank'}:
 {% asset grow-journal/2018/08/day-24-skywalker-kush.jpg alt="Skywalker Kush, Day 24 of Veg" %}
 
-[Ayahuasca Purple](https://www.barneysfarm.com/ayahuasca-purple-18){:rel='noopener', :target='_blank'}:
+[Ayahuasca Purple](https://www.barneysfarm.com/ayahuasca-purple-18){:rel='noopener'}{:target='_blank'}:
 {% asset grow-journal/2018/08/day-24-ayahuasca-purple.jpg alt="Ayahuasca Purple, Day 24 of Veg" %}
 
-and [Ghost Train Haze](http://www.raredanknessgenetics.com/Seeds/SATIVA/GhostTrainHaze1.htm){:rel='noopener', :target='_blank'}:
+and [Ghost Train Haze](http://www.raredanknessgenetics.com/Seeds/SATIVA/GhostTrainHaze1.htm){:rel='noopener'}{:target='_blank'}:
 {% asset grow-journal/2018/08/day-24-ghost-train-haze.jpg alt="Ghost Train Haze, Day 24 of Veg" %}
 
 They have been looking mostly good since the switch, and although I'm seeing

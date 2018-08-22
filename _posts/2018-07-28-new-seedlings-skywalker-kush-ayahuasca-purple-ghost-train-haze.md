@@ -3,9 +3,9 @@ title: 'New seedlings: Skywalker Kush, Ayahuasca Purple, & Ghost Train Haze'
 ---
 
 Sprouted three new strains (from left to right):
-[Skywalker Kush](https://dnagenetics.com/skywalker-kush.html){:rel='noopener', :target='_blank'},
-[Ayahuasca Purple](https://www.barneysfarm.com/ayahuasca-purple-18){:rel='noopener', :target='_blank'},
-and [Ghost Train Haze](http://www.raredanknessgenetics.com/Seeds/SATIVA/GhostTrainHaze1.htm){:rel='noopener', :target='_blank'}.
+[Skywalker Kush](https://dnagenetics.com/skywalker-kush.html){:rel='noopener'}{:target='_blank'},
+[Ayahuasca Purple](https://www.barneysfarm.com/ayahuasca-purple-18){:rel='noopener'}{:target='_blank'},
+and [Ghost Train Haze](http://www.raredanknessgenetics.com/Seeds/SATIVA/GhostTrainHaze1.htm){:rel='noopener'}{:target='_blank'}.
 
 {% asset grow-journal/2018/07/skywalker-kush-ayahuasca-purple-ghost-train-haze-seedlings.jpg alt="Skywalker Kush, Ayahuasca Purple, & Ghost Train Haze seedlings" %}
 
