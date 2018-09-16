@@ -1,13 +1,13 @@
 class LiveStream
   delay = 60
   image_interval = 15
-  image_url_base = 'https://live.420friend.ly/thumb/'
+  image_url_base = 'https://live.420friend.ly/'
   live_after = 2
   live_before = 14
   max_retries = 2
 
-  constructor: ->
-    @$live_stream = $('.live-stream')
+  constructor: (el) ->
+    @$live_stream = $(el)
     @load()
 
   go_offline: -> @$live_stream.removeClass('live')
@@ -35,7 +35,10 @@ class LiveStream
     if hour < 10 then hour = "0" + hour
     if minute < 10 then minute = "0" + minute
 
-    image_url_base + year + month + day + hour + minute + '-' + version + '.jpg'
+    @image_url_base() + year + month + day + hour + minute + '-' + version +
+      '.jpg'
+
+  image_url_base: -> @$live_stream.data('url-base') || image_url_base
 
   load: ->
     @date = new Date();
@@ -63,7 +66,7 @@ class LiveStream
   sleeping: -> @$live_stream.hasClass('sleeping')
 
   set_updated_at: ->
-    $.get image_url_base + 'last.jpg?js', (ev, status, xhr) =>
+    $.get @image_url_base() + 'last.jpg?js', (ev, status, xhr) =>
       date = new Date xhr.getResponseHeader('Last-Modified')
       hour = date.getHours()
       minute = date.getMinutes()
@@ -82,4 +85,5 @@ class LiveStream
 
       @$live_stream.attr('updated-at', date_str)
 
-$(document).ready -> new LiveStream
+$(document).ready ->
+  $('.live-stream').each -> new LiveStream(@)

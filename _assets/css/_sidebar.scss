@@ -20,6 +20,7 @@
 			background: url('https://live.420friend.ly/thumb/last.jpg') top center no-repeat;
 			background-size: cover;
 			overflow: hidden;
+			cursor: pointer;
 
 			&::before, &::after {
 				position: absolute;

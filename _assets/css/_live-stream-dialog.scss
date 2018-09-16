@@ -1,0 +1,46 @@
+#live-stream-dialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, .7);
+	z-index: 9;
+
+	.live-stream-wrapper {
+		position: relative;
+		width: 800px;
+		max-width: 100%;
+		max-height: 100%;
+
+		&::before {
+			content: '';
+			display: block;
+			padding-top: 75%;
+		}
+
+		.live-stream {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: black url('https://live.420friend.ly/last.jpg') top center no-repeat;
+			background-size: contain;
+			overflow: hidden;
+		}
+	}
+
+	.close {
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		line-height: 26px;
+		font-size: 26px;
+		color: white;
+		z-index: 2;
+	}
+}
