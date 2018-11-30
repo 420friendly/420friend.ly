@@ -2,8 +2,8 @@ class LiveStream
   delay = 60
   image_interval = 15
   image_url_base = 'https://live.420friend.ly/'
-  live_after = 2
-  live_before = 14
+  live_after = 0
+  live_before = 18
   max_retries = 2
 
   constructor: (el) ->
