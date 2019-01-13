@@ -1,12 +1,12 @@
 # Capture every 15 seconds
-* 0-17 * * * pgrep -n "capture" || /home/sam/bin/capture 1
-* 0-17 * * * sleep 15 ; pgrep -n "capture" || /home/sam/bin/capture 2
-* 0-17 * * * sleep 30 ; pgrep -n "capture" || /home/sam/bin/capture 3
-* 0-17 * * * sleep 45 ; pgrep -n "capture" || /home/sam/bin/capture 4
+* 3-14 * * * pgrep -n "capture" || /home/sam/bin/capture 1
+* 3-14 * * * sleep 15 ; pgrep -n "capture" || /home/sam/bin/capture 2
+* 3-14 * * * sleep 30 ; pgrep -n "capture" || /home/sam/bin/capture 3
+* 3-14 * * * sleep 45 ; pgrep -n "capture" || /home/sam/bin/capture 4
 
 # Sync every 30 seconds
-* 0-17 * * * pgrep -n "sync" || /home/sam/bin/sync
-* 0-17 * * * sleep 30 ; pgrep -n "sync" || /home/sam/bin/sync
+* 3-14 * * * pgrep -n "sync" || /home/sam/bin/sync
+* 3-14 * * * sleep 30 ; pgrep -n "sync" || /home/sam/bin/sync
 
 # Copy last every hour
-0 1-18 * * * pgrep -n "copy-last" || /home/sam/bin/copy-last
+0 4-15 * * * pgrep -n "copy-last" || /home/sam/bin/copy-last
